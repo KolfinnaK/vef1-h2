@@ -250,7 +250,7 @@ Setja skal verkefnið upp á Netlify, tengt GitHub.
 Fyrir valið efni er metið:
 
 - Einstaklingsverkefni: tvö auka verkefni útfært.
-- Tveggja manna hópverkefni: þrjú auka verkefni útfærð.
+- **Tveggja manna hópverkefni: þrjú auka verkefni útfærð.**
 - Þriggja manna hópverkefni: fjögur auka verkefni útfærð.
 - Fjögurra manna hópverkefni: fimm auka verkefni útfærð.
 
