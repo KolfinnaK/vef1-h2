@@ -1,0 +1,22 @@
+{
+    "name": "vef1-2024-h2",
+    "version": "1.0.0",
+    "description": "A web project for Vefforritun 1, Hópverkefni 2",
+    "main": "index.html",
+    "scripts": {
+      "dev": "lite-server",
+      "start": "lite-server",
+      "lint": "eslint . && stylelint '**/*.scss'"
+    },
+    "dependencies": {},
+    "devDependencies": {
+      "eslint": "^8.47.0",
+      "stylelint": "^15.10.0",
+      "stylelint-config-standard": "^31.0.0",
+      "stylelint-config-sass-guidelines": "^9.0.1",
+      "lite-server": "^2.6.1"
+    },
+    "author": "Kolfinna",
+    "license": "ISC"
+  }
+  
