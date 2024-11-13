@@ -1,22 +1,26 @@
 {
-    "name": "vef1-2024-h2",
-    "version": "1.0.0",
-    "description": "A web project for Vefforritun 1, Hópverkefni 2",
-    "main": "index.html",
-    "scripts": {
-      "dev": "lite-server",
-      "start": "lite-server",
-      "lint": "eslint . && stylelint '**/*.scss'"
-    },
-    "dependencies": {},
-    "devDependencies": {
-      "eslint": "^8.47.0",
-      "stylelint": "^15.10.0",
-      "stylelint-config-standard": "^31.0.0",
-      "stylelint-config-sass-guidelines": "^9.0.1",
-      "lite-server": "^2.6.1"
-    },
-    "author": "Kolfinna",
-    "license": "ISC"
+  "name": "vef1-2024-h2",
+  "version": "1.0.0",
+  "description": "- [Fyrirlestur 11.3: Hópverkefni 2 (22:55)](https://youtu.be/oi4pSYgvX2M)",
+  "main": "main.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . && stylelint '**/*.scss'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^9.14.0",
+    "stylelint": "^16.10.0",
+    "stylelint-config-sass-guidelines": "^12.1.0",
+    "stylelint-config-standard": "^36.0.1",
+    "vite": "^5.4.11"
   }
-  
+}
