@@ -2,65 +2,57 @@ import { fetcher } from './lib/fetcher.js';
 import { renderIndexPage } from './lib/pages/index-page.js';
 import { renderContentPage } from './lib/pages/content-page.js';
 import { renderSubpage } from './lib/pages/sub-page.js';
+import { showLecturesList, showLectureDetail } from './lib/show-lectures.js';
 
 async function render(root, querystring) {
   try {
+    console.log("Rendering page with query:", querystring);
+
     const mainIndexJson = await fetcher('./data/index.json');
-    if (!mainIndexJson) {
-      throw new Error('Failed to load main index.json');
-    }
-
     const params = new URLSearchParams(querystring);
-    let type = params.get('type');  // Use let here to allow reassignment
+    let type = params.get('type');
     const content = params.get('content');
+    const lectureSlug = params.get('lecture');
 
-    // Convert 'javascript' to 'js' to match folder structure
-    if (type === 'javascript') {
-      type = 'js';
-    }
+    if (type === 'javascript') type = 'js';
 
-    // Render the homepage if no specific type is requested
     if (!type) {
-      return renderIndexPage(root, mainIndexJson, render); // Pass render as a callback
+      return renderIndexPage(root, mainIndexJson, render);
     }
 
-    // Render specific content pages based on `type` and `content`
+    if (content === 'lectures') {
+      const lecturesJson = await fetcher(`./data/${type}/lectures.json`);
+      if (lectureSlug) {
+        const lecture = lecturesJson.lectures.find(l => l.slug === lectureSlug);
+        if (lecture) return showLectureDetail(root, lecture);
+      }
+      return showLecturesList(root, lecturesJson, type);
+    }
+
     if (content) {
       const contentJson = await fetcher(`./data/${type}/${content}.json`);
-      if (!contentJson) {
-        throw new Error(`Failed to load ${content} for ${type}`);
-      }
       return renderContentPage(root, mainIndexJson, contentJson, content);
-    } else {
-      // If only `type` is provided, render the main page for the type
-      return renderSubpage(root, mainIndexJson, type);
     }
+
+    return renderSubpage(root, mainIndexJson, type);
   } catch (error) {
-    console.error(error);
-    root.innerHTML = '<p>Something went wrong while loading the page. Please try again later.</p>';
+    console.error("Render error:", error);
+    root.innerHTML = '<p>Something went wrong while loading the page.</p>';
   }
 }
 
-// Initialize the root element
 const root = document.querySelector('#app');
-
-// Initial render based on the current URL
 render(root, window.location.search);
 
-// Listen for popstate events to handle back/forward navigation
-window.addEventListener('popstate', () => {
-  render(root, window.location.search);
-});
+window.addEventListener('popstate', () => render(root, window.location.search));
 
-// Intercept link clicks to use History API instead of reloading the page
 document.addEventListener('click', (e) => {
-  if (e.target.tagName === 'A' && e.target.getAttribute('href').startsWith('/')) {
+  const link = e.target.closest('a');
+  if (link && link.getAttribute('href') && link.getAttribute('href').startsWith('/')) {
     e.preventDefault();
-    const url = new URL(e.target.href);
-
-    // Check if we are already on the intended page to avoid redundant render
-    if (window.location.pathname + window.location.search !== url.pathname + url.search) {
-      history.pushState(null, '', url.pathname + url.search);
+    const url = new URL(link.href);
+    if (window.location.search !== url.search) {
+      history.pushState(null, '', url.search);
       render(root, url.search);
     }
   }
