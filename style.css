@@ -116,6 +116,18 @@ h2,
 h3,
 legend {
   font-family: var(--font-family-heading);
+ padding:1rem;
+}
+p{
+  padding:1rem;
+}
+
+ul{
+  list-style: none;
+}
+
+blockquote, figcaption, img, pre{
+  padding:1rem;
 }
 
 /** Lætur myndir aldrei taka meira pláss en foreldri skilgreinir **/
@@ -175,8 +187,6 @@ dt {
 dd {
   margin-bottom: var(--spacing);
 }
-
-/
 
 /**
  * Eftirfarandi setur upp grunn umbrot (layout) síðu með flexbox.
@@ -246,17 +256,6 @@ header h1 {
   }
 }
 
-footer {
-  display: grid;
-  justify-items: center;
-  padding-top: var(--spacing);
-  padding-bottom: var(--spacing);
-  border-top: 4px solid var(--color-border-with-background);
-  width: 100%;
-  background-color: var(--color-background-secondary);
-  text-align: center;
-}
-
 footer > .content {
   display: grid;
   justify-content: center;
@@ -273,6 +272,39 @@ footer ul {
 
 footer h2 {
   margin-bottom: var(--spacing);
+}
+
+html, body{
+  height:100%;
+  width: 100%;
+}
+
+#app{
+  display: flex;
+  flex-direction: column;
+  height:100%;
+ 
+}
+
+#app li{
+  padding: 0.5rem;
+}
+
+#app ul{
+  padding:1rem;
+}
+
+main {
+  flex-grow: 1;
+  padding:1rem;
+}
+
+footer {
+  padding: 10px;
+  text-align: center;
+  border-top: 4px solid var(--color-border-with-background);
+  width: 100%;
+  background-color: var(--color-background-secondary);
 }
 
 @media (width >= 700px) {
@@ -436,25 +468,6 @@ main > .content {
   margin-top: var(--spacing);
 }
 
-/** Viðburðir **/
-.event {
-  clear: left;
-  width: 100%;
-  margin-bottom: calc(var(--spacing) * 2);
-}
-
-.event .title {
-  margin-bottom: var(--spacing);
-}
-
-.event .content {
-  width: 100%;
-}
-
-.event .register {
-  clear: both;
-}
-
 /** Spilasíða, töflustílar **/
 /* Leyfir skroll á töflu ef pláss er ekki nóg til að birta hana alla lárétt */
 .table-wrapper {
@@ -497,32 +510,6 @@ table img {
   min-width: var(--min-width-image);
   max-width: var(--max-width-image);
 }
-
-/** Skráningarform **/
-fieldset {
-  border: 0;
-}
-
-fieldset legend {
-  margin-bottom: var(--spacing);
-  font-size: var(--font-size-headings);
-}
-
-fieldset input,
-fieldset select,
-fieldset textarea {
-  padding: calc(var(--spacing) * 0.5);
-  width: 100%;
-  border: var(--border-regular);
-  background-color: var(--color-background-form);
-}
-
-fieldset input[type=checkbox] {
-  display: inline-block;
-  margin-right: calc(var(--spacing) * 0.5);
-  width: auto;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -557,7 +544,7 @@ html {
 
 html {
   font-family: var(--font-family);
-  padding: var(--spacing);
+  
 }
 
 input,
@@ -593,4 +580,6 @@ button {
   padding-inline: var(--spacing);
   max-width: var(--max-width);
 }
+
+
 
