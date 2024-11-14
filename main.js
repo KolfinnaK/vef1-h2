@@ -57,7 +57,11 @@ document.addEventListener('click', (e) => {
   if (e.target.tagName === 'A' && e.target.getAttribute('href').startsWith('/')) {
     e.preventDefault();
     const url = new URL(e.target.href);
-    history.pushState(null, '', url.pathname + url.search);
-    render(root, url.search);
+
+    // Check if we are already on the intended page to avoid redundant render
+    if (window.location.pathname + window.location.search !== url.pathname + url.search) {
+      history.pushState(null, '', url.pathname + url.search);
+      render(root, url.search);
+    }
   }
 });
