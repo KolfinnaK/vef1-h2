@@ -570,6 +570,20 @@ button {
   padding: 0.25rem 0.5rem;
 }
 
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--spacing);
+}
+
+.button-description {
+  font-size: 1rem;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
 #root {
   display: flex;
   flex-direction: column;
