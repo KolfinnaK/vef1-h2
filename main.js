@@ -14,24 +14,28 @@ async function render(root, querystring) {
     const type = params.get('type');
     const content = params.get('content');
 
+    // Render the homepage if no specific type is requested
     if (!type) {
       return renderIndexPage(root, mainIndexJson);
     }
 
-    if (content === 'lectures' || content === 'keywords' || content === 'questions') {
+    // Render specific content pages based on `type` and `content`
+    if (content) {
       const contentJson = await fetcher(`./data/${type}/${content}.json`);
       if (!contentJson) {
         throw new Error(`Failed to load ${content} for ${type}`);
       }
       return renderContentPage(root, mainIndexJson, contentJson, content);
+    } else {
+      // If only `type` is provided, render the main page for the type
+      return renderSubpage(root, mainIndexJson, type);
     }
-
-    return renderSubpage(root, mainIndexJson, type);
   } catch (error) {
     console.error(error);
     root.innerHTML = '<p>Something went wrong while loading the page. Please try again later.</p>';
   }
 }
+
 
 const root = document.querySelector('#app');
 
