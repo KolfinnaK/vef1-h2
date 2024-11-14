@@ -3,6 +3,7 @@ import { renderIndexPage } from './lib/pages/index-page.js';
 import { renderContentPage } from './lib/pages/content-page.js';
 import { renderSubpage } from './lib/pages/sub-page.js';
 import { showLecturesList, showLectureDetail } from './lib/show-lectures.js';
+import { showKeywordsList, showKeywordDetail } from './lib/show-keywords.js';
 
 async function render(root, querystring) {
   try {
@@ -13,6 +14,7 @@ async function render(root, querystring) {
     let type = params.get('type');
     const content = params.get('content');
     const lectureSlug = params.get('lecture');
+    const keywordSlug=params.get('keyword');
 
     if (type === 'javascript') type = 'js';
 
@@ -27,6 +29,11 @@ async function render(root, querystring) {
         if (lecture) return showLectureDetail(root, lecture);
       }
       return showLecturesList(root, lecturesJson, type);
+    }
+    if (content === 'keywords') {
+      const keywordsJson = await fetcher(`./data/${type}/keywords.json`);
+      console.log(keywordsJson);
+      return showKeywordsList(root, keywordsJson, type);
     }
 
     if (content) {
