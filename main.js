@@ -11,12 +11,17 @@ async function render(root, querystring) {
     }
 
     const params = new URLSearchParams(querystring);
-    const type = params.get('type');
+    let type = params.get('type');  // Use let here to allow reassignment
     const content = params.get('content');
+
+    // Convert 'javascript' to 'js' to match folder structure
+    if (type === 'javascript') {
+      type = 'js';
+    }
 
     // Render the homepage if no specific type is requested
     if (!type) {
-      return renderIndexPage(root, mainIndexJson);
+      return renderIndexPage(root, mainIndexJson, render); // Pass render as a callback
     }
 
     // Render specific content pages based on `type` and `content`
@@ -36,15 +41,18 @@ async function render(root, querystring) {
   }
 }
 
-
+// Initialize the root element
 const root = document.querySelector('#app');
 
+// Initial render based on the current URL
 render(root, window.location.search);
 
+// Listen for popstate events to handle back/forward navigation
 window.addEventListener('popstate', () => {
   render(root, window.location.search);
 });
 
+// Intercept link clicks to use History API instead of reloading the page
 document.addEventListener('click', (e) => {
   if (e.target.tagName === 'A' && e.target.getAttribute('href').startsWith('/')) {
     e.preventDefault();
