@@ -28,7 +28,21 @@ TODO: skrifa um uppsetningu verkefnis, hvernig því er skipt í möppur, hverni
 
 ## Útfærsla
 **Birting á námsefni, gildir sem tvö auka verkefni**
-TODO: skrifa nákvæmlega hvað var gert
+Útfærðum þetta þannig að þegar ýtt er á námsefni takkan færðu val á fyrirlestrum (lista af heiti þeirra) og þegar þú velur ákveðinn fyrirlestur færðu nánari námsefni fyrir hann. 
+
+* Ný skrá: show-lectures.js var búin til til að útfæra birtingu á námsefni.
+* showLecturesList: Þetta fall birtir lista/yfirlit yfir fyrirlestra fyrir valið efni og með því að smella á hlekki færðu nánari upplýsingar um fyrirlestur sem var valinn.
+* showLectureDetail: Sér um að birta innihald fyrirlestrarins, þar sem gögn eins og text, heading, quote, image (sem við reyndar fundum ekki í gögnunum... ), list og code eru birt á viðeigandi hátt.
+* Uppfærsla á main.js til að höndla leiðakerfi fyrir námsefni:
+  * main.js greinir URL-viðföng (eins og type, content, og lectureSlug) til að ákvarða hvaða efni skal birta
+  * Leiðakerfi fyrir námsefni:
+    * Þegar content=lectures er í slóðinni, sækir main.js viðkomandi lectures.json skrá og sýnir lista yfir fyrirlestra með showLecturesList.
+    * Ef tiltekinn fyrirlestur (lectureSlug) er specified, kallar kóðinn á showLectureDetail til að birta efni hans.
+* History API: history.pushState gerir kleift að fletta á milli fyrirlestra án þess að hlaða síðuna að nýju, og popstate endurritar innihaldið við til baka og áfram.
+* fetcher: Sækir gögn úr réttri lectures.json skrá.
+* Dýnamísk birting á gögnum: Með showLecturesList og showLectureDetail er DOM uppfært með lista yfir fyrirlestra eða smáatriðum fyrir valinn fyrirlestur.
+* Hnappar í renderSubpage (t.d. „Námsefni“) vísa á námsefnissíður með breytingu á URL og kalla á render til að birta viðeigandi efni.
+* Aðeins innihaldið uppfærist innan root svo haus og fótur haldast eins milli síðna.
 
 * **Birting á lykilhugtökum**
 TODO: skrifa nkl hvað var gert
