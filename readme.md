@@ -28,11 +28,11 @@ TODO: skrifa um uppsetningu verkefnis, hvernig því er skipt í möppur, hverni
 
 ## Útfærsla
 **Birting á námsefni, gildir sem tvö auka verkefni**
-Útfærðum þetta þannig að þegar ýtt er á námsefni takkan færðu val á fyrirlestrum (lista af heiti þeirra) og þegar þú velur ákveðinn fyrirlestur færðu nánari námsefni fyrir hann. 
+Útfærðum þetta þannig að þegar ýtt er á námsefni takkann færðu val á fyrirlestrum (lista af heiti þeirra) og þegar þú velur ákveðinn fyrirlestur færðu nánari námsefni fyrir hann. 
 
 * Ný skrá: show-lectures.js var búin til til að útfæra birtingu á námsefni.
 * showLecturesList: Þetta fall birtir lista/yfirlit yfir fyrirlestra fyrir valið efni og með því að smella á hlekki færðu nánari upplýsingar um fyrirlestur sem var valinn.
-* showLectureDetail: Sér um að birta innihald fyrirlestrarins, þar sem gögn eins og text, heading, quote, image (sem við reyndar fundum ekki í gögnunum... ), list og code eru birt á viðeigandi hátt.
+* showLectureDetail: Sér um að birta innihald fyrirlestrarins, þar sem gögn eins og text, heading, quote, image, list og code eru birt á viðeigandi hátt.
 * Uppfærsla á main.js til að höndla leiðakerfi fyrir námsefni:
   * main.js greinir URL-viðföng (eins og type, content, og lectureSlug) til að ákvarða hvaða efni skal birta
   * Leiðakerfi fyrir námsefni:
@@ -45,4 +45,13 @@ TODO: skrifa um uppsetningu verkefnis, hvernig því er skipt í möppur, hverni
 * Aðeins innihaldið uppfærist innan root svo haus og fótur haldast eins milli síðna.
 
 * **Birting á lykilhugtökum**
-TODO: skrifa nkl hvað var gert
+* Lykilhugtökin voru birt á svipaðan hátt og námsefnið. 
+* Ný skrá var búin til: show-keywords.js
+* Í henni er showKeywordsList sem birtir lista af öllum lykilhugtökum fyrir valið efni.
+* showKeywordDetail sýnir síðan innihald þess lykilhugtaks sem er valið.
+* Í main.js, ef content=keywords þá sækir fallið keywords.json og notar síðan showKeywordsList til að birta lista yfir hugtökin.
+* Inn í showKeywordsList er síðan listener settur þannig kallað er á showKeywordDetail fyrir það hugtak sem ýtt var á.
+* History API: history.pushState gerir kleift að fletta á milli fyrirlestra án þess að hlaða síðuna að nýju, og popstate endurritar innihaldið við til baka og áfram.
+* Sjá í showKeywordDetail hvernig details eru birt. Fyrst er titill síðan ef það er orð á ensku fyrir þetta hugtak þá er það birt boldað og síðan kemur lýsingin.
+* Hnappar í renderSubpage (t.d. „Námsefni“) vísa á námsefnissíður með breytingu á URL og kalla á render til að birta viðeigandi efni.
+* Aðeins innihaldið uppfærist innan root svo haus og fótur haldast eins milli síðna.

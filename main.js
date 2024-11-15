@@ -14,7 +14,6 @@ async function render(root, querystring) {
     let type = params.get('type');
     const content = params.get('content');
     const lectureSlug = params.get('lecture');
-    const keywordSlug=params.get('keyword');
 
     if (type === 'javascript') type = 'js';
 
@@ -33,7 +32,7 @@ async function render(root, querystring) {
     if (content === 'keywords') {
       const keywordsJson = await fetcher(`./data/${type}/keywords.json`);
       console.log(keywordsJson);
-      return showKeywordsList(root, keywordsJson, type, mainIndexJson);
+      return showKeywordsList(root, keywordsJson, type);
     }
 
     if (content) {
