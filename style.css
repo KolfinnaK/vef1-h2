@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* Setjum inn „reset“ sem fjarlægir margin og padding af öllu */
 * {
   margin: 0;
@@ -6,48 +7,60 @@
 }
 
 /* Stillingar */
+
 /* Eftirfarandi getum við ekki gert með CSS Custom variables */
 :root {
   --font-size-base: 16px;
   --font-size-headings: 1.5rem;
+
   /* Grunn bilið okkar er 1rem == 16px */
   --spacing: 1rem;
+
   /* Bil á milli „stærri“ eininga (header, efnisbox, footer) */
   --vertical-space: calc(var(--gutter) * 1);
   --vertical-space-large: calc(var(--gutter) * 1.5);
+
   /* Hámarks og lágmarks breidd á efni */
   --max-width: 1200px;
   --min-width-image: 200px;
   --max-width-image: 300px;
   --max-width-footer-section: 250px;
+
   /* Border breiddir */
   --border-width: 1px;
   --border-radius-regular: 5px;
   --border-radius-image: 10px;
   --border-regular: 1px solid #000; /* todo longhand */
   --border-with-background: 4px solid #c9b;
+
   /* Grid stillingar */
   --columns: 12;
   --gutter: 30px;
   --offset: 20px;
+
   /* Breidd á efni með offset */
   --width-offset: calc(100% - (2 * var(--offset)));
+
   /* Litir */
+
   /** Litir með nafni **/
   --color-yellow: #efc4f6;
-  --color-white: rgb(230, 189, 225);
+  --color-white: rgb(230 189 225);
   --color-black: #000;
-  --color-purple: rgb(241, 219, 241);
-  --color-purple-dark: rgb(225, 174, 208);
+  --color-purple: rgb(241 219 241);
+  --color-purple-dark: rgb(225 174 208);
+
   /** Litir með notkun **/
   --color-background-primary: var(--color-yellow);
   --color-background-secondary: var(--color-purple);
   --color-background-form: var(--color-white);
   --color-border-with-background: var(--color-purple-dark);
+
   /* Letur stillingar */
   --font-base-size: 1rem;
-  --font-family-base: "Open Sans", arial, helvetica, sans-serif;
-  --font-family-heading: "Matemasie-Regular", "Comic Sans MS", cursive;
+  --font-family-base: 'Open Sans', arial, helvetica, sans-serif;
+  --font-family-heading: 'Matemasie-Regular', 'Comic Sans MS', cursive;
+
   /* Transitions */
   --transition-time-short: 300ms;
   --transition-time-long: 600ms;
@@ -60,34 +73,21 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("./fonts/Matemasie-Regular.ttf") format("woff2");
+  src: url('./fonts/Matemasie-Regular.ttf') format('woff2');
 }
+
 @font-face {
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("./fonts/OpenSans-VariableFont_wdth,wght.ttf") format("woff2");
-}
-@font-face {
-  font-family: "Open Sans";
-  font-weight: 700;
-  src: url("./fonts/OpenSans-VariableFont_wdth,wght.ttf") format("woff2");
-}
-html {
-  /* Reiknum stærð á öllum boxum sem border-box */
-  box-sizing: border-box;
-  /* Til að transition sé ekki frá hvítum */
-  background-color: var(--color-background-primary);
-  /* Grunnstærð er 16px */
-  font-size: var(--font-size-base);
+  src: url('./fonts/OpenSans-VariableFont_wdth,wght.ttf') format('woff2');
 }
 
-/* og látum erfast á allt */
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 700;
+  src: url('./fonts/OpenSans-VariableFont_wdth,wght.ttf') format('woff2');
 }
 
 /* hjálpar class sem felur sjónrænt en skjálesarar lesa */
@@ -102,8 +102,8 @@ html {
 }
 
 /* Almennt */
+
 /*** Allt meginmál notar open sans ***/
-html,
 input,
 select,
 button {
@@ -116,18 +116,22 @@ h2,
 h3,
 legend {
   font-family: var(--font-family-heading);
- padding:1rem;
-}
-p{
-  padding:1rem;
+  padding: 1rem;
 }
 
-ul{
+p {
+  padding: 1rem;
+}
+
+ul {
   list-style: none;
 }
 
-blockquote, figcaption, img, pre{
-  padding:1rem;
+blockquote,
+figcaption,
+img,
+pre {
+  padding: 1rem;
 }
 
 /** Lætur myndir aldrei taka meira pláss en foreldri skilgreinir **/
@@ -170,10 +174,12 @@ a {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
+
 header,
 .wrapper {
   animation: var(--transition-time-long) var(--transition-timing-function) fade-in;
@@ -200,6 +206,7 @@ dd {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 100%;
+
   /* grid items eru miðjuð */
   justify-items: center;
   gap: var(--vertical-space);
@@ -213,6 +220,7 @@ dd {
     gap: var(--vertical-space-large);
   }
 }
+
 .wrapper .wrapper-content {
   width: var(--width-offset);
   max-width: var(--max-width);
@@ -228,13 +236,16 @@ dd {
     grid-template-columns: repeat(var(--columns), 1fr);
     gap: var(--gutter);
   }
+
   .wrapper .wrapper-nav {
     grid-column: span 2;
   }
+
   .wrapper .wrapper-main {
     grid-column: span 10;
   }
 }
+
 /** Haus á síðum **/
 header {
   padding: var(--spacing) calc(var(--spacing) * 1.5);
@@ -245,12 +256,12 @@ header {
 }
 
 header h1 {
-  font-size: 24px; 
-  margin: 0;       
+  font-size: 24px;
+  margin: 0;
   padding: 0;    
 }
 
-@media (max-width: 320px) {
+@media (width <= 320px) {
   header h1 {
     font-size: 20px; 
   }
@@ -274,52 +285,8 @@ footer h2 {
   margin-bottom: var(--spacing);
 }
 
-html, body{
-  height:100%;
-  width: 100%;
-}
-
-#app{
-  display: flex;
-  flex-direction: column;
-  height:100%;
- 
-}
-
-#app li{
-  padding: 0.5rem;
-}
-
-#app ul{
-  padding:1rem;
-}
-
-main {
-  flex-grow: 1;
-  padding:1rem;
-}
-
-footer {
-  padding: 10px;
-  text-align: center;
-  border-top: 4px solid var(--color-border-with-background);
-  width: 100%;
-  background-color: var(--color-background-secondary);
-}
-
-@media (width >= 700px) {
-  footer > .content {
-    grid-template-columns: repeat(var(--columns), 1fr);
-    grid-template-rows: auto;
-    width: var(--width-offset);
-    max-width: var(--max-width);
-  }
-  footer .content > section {
-    grid-column: span 4;
-  }
-}
-/** Valmynd **/
-nav {
+body {
+  height: 100%;
   width: 100%;
 }
 
@@ -341,8 +308,51 @@ nav ul li {
     display: block;
   }
 }
-/** Meginmál og efni forsíðu **/
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+ 
+}
+
+#app li {
+  padding: 0.5rem;
+}
+
+#app ul {
+  padding: 1rem;
+}
+
 main {
+  flex-grow: 1;
+  padding: 1rem;
+  width: 100%;
+}
+
+footer {
+  padding: 10px;
+  text-align: center;
+  border-top: 4px solid var(--color-border-with-background);
+  width: 100%;
+  background-color: var(--color-background-secondary);
+}
+
+@media (width >= 700px) {
+  footer > .content {
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-rows: auto;
+    width: var(--width-offset);
+    max-width: var(--max-width);
+  }
+
+  footer .content > section {
+    grid-column: span 4;
+  }
+}
+
+/** Valmynd **/
+nav {
   width: 100%;
 }
 
@@ -373,10 +383,12 @@ main > .content {
   .intro {
     flex-direction: row;
   }
+
   .intro img {
     max-width: var(--max-width-image);
   }
 }
+
 /** Cards **/
 .cards {
   display: grid;
@@ -405,6 +417,7 @@ main > .content {
     grid-template-rows: auto;
   }
 }
+
 /** Card **/
 .card {
   display: flex;
@@ -417,6 +430,7 @@ main > .content {
     grid-column: span 5;
   }
 }
+
 .card > .image {
   width: 100%;
 }
@@ -468,83 +482,26 @@ main > .content {
   margin-top: var(--spacing);
 }
 
-/** Spilasíða, töflustílar **/
-/* Leyfir skroll á töflu ef pláss er ekki nóg til að birta hana alla lárétt */
-.table-wrapper {
-  overflow-x: auto;
-}
-
-table {
-  margin-bottom: var(--spacing);
-  border-spacing: 0;
-}
-
-table th,
-table td {
-  padding: calc(var(--spacing) / 2);
-  text-align: left;
-}
-
-table td:last-child {
-  white-space: nowrap;
-}
-
-table tr th:first-child,
-table tr td:first-child {
-  border-top-left-radius: var(--border-radius-regular);
-  border-bottom-left-radius: var(--border-radius-regular);
-}
-
-table tr th:last-child,
-table tr td:last-child {
-  border-top-right-radius: var(--border-radius-regular);
-  border-bottom-right-radius: var(--border-radius-regular);
-}
-
-table tbody tr:nth-child(2n+1) {
-  background-color: var(--color-background-secondary);
-}
-
-table img {
-  width: 100%;
-  min-width: var(--min-width-image);
-  max-width: var(--max-width-image);
-}
-* {
-  margin: 0;
-  padding: 0;
-}
-
 html {
   box-sizing: border-box;
+  font-family: var(--font-family-base);
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-background-primary);
+  font-size: var(--font-size-base);
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
-}
-
-:root {
-  --spacing: 1rem;
-  --max-width: 56rem;
-
-  --font-size-button: 1rem;
-  --font-family: -system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-  --color-light-gray: #f5f5f5;
-  --color-background-zebra: var(--color-light-gray);
+  margin: 0;
+  padding: 0;
 }
 
 .hidden {
   /* Viljum að þetta feli alltaf element, notum því !important */
   display: none !important;
-}
-
-html {
-  font-family: var(--font-family);
-  
 }
 
 input,
@@ -575,7 +532,6 @@ button {
   display: flex;
   flex-direction: column;
   gap: var(--spacing);
-
   margin: var(--spacing) auto;
   padding-inline: var(--spacing);
   max-width: var(--max-width);

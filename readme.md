@@ -55,3 +55,6 @@ TODO: skrifa um uppsetningu verkefnis, hvernig því er skipt í möppur, hverni
 * Sjá í showKeywordDetail hvernig details eru birt. Fyrst er titill síðan ef það er orð á ensku fyrir þetta hugtak þá er það birt boldað og síðan kemur lýsingin.
 * Hnappar í renderSubpage (t.d. „Námsefni“) vísa á námsefnissíður með breytingu á URL og kalla á render til að birta viðeigandi efni.
 * Aðeins innihaldið uppfærist innan root svo haus og fótur haldast eins milli síðna.
+
+
+* Við tókum css skrá úr verkefni 5 eins og sagt var í fyrirlestri að mætti. Allt í einni css skrá, engar scss skrár.
