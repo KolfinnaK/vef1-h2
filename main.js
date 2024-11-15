@@ -33,7 +33,7 @@ async function render(root, querystring) {
     if (content === 'keywords') {
       const keywordsJson = await fetcher(`./data/${type}/keywords.json`);
       console.log(keywordsJson);
-      return showKeywordsList(root, keywordsJson, type);
+      return showKeywordsList(root, keywordsJson, type, mainIndexJson);
     }
 
     if (content) {
