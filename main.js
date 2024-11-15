@@ -3,7 +3,7 @@ import { renderIndexPage } from './lib/pages/index-page.js';
 import { renderContentPage } from './lib/pages/content-page.js';
 import { renderSubpage } from './lib/pages/sub-page.js';
 import { showLecturesList, showLectureDetail } from './lib/show-lectures.js';
-import { showKeywordsList, showKeywordDetail } from './lib/show-keywords.js';
+import { showKeywordsList} from './lib/show-keywords.js';
 
 async function render(root, querystring) {
   try {
@@ -18,7 +18,7 @@ async function render(root, querystring) {
     if (type === 'javascript') type = 'js';
 
     if (!type) {
-      return renderIndexPage(root, mainIndexJson, render);
+      return renderIndexPage(root, mainIndexJson);
     }
 
     if (content === 'lectures') {
