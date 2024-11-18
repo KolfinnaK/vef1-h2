@@ -15,13 +15,13 @@ Efnið sem gefið er í data/html/keywords.json, data/css/keywords.json, data/js
 ## Að keyra verkefnið
 
 Keyra skal verkefnið með skipun í terminal:  
-npm install  
-npm run dev - keyrir server með vite  
+**npm install**  
+**n**pm run dev** - keyrir server með vite  
 
-Auka:
-npm run build - til að builda verkefnið  
-npm run preview - hægt að previewa buildið  
-npm run lint - keyrir eslint og stylelint og leitar að villum, villulaust  
+Auka:  
+**npm run build** - til að builda verkefnið  
+**npm run preview** - hægt að previewa buildið  
+**npm run lint** - keyrir eslint og stylelint og leitar að villum, villulaust  
 
 ## Uppsetning
 
