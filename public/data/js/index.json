@@ -1,0 +1,28 @@
+{
+  "title": "JavaScript",
+  "text": "JavaScript gerir okkur kleift að gera vefina okkar gagnvirka.",
+  "category": "javascript",
+  "content": [
+    {
+      "type": "lectures",
+      "url": "lectures.json",
+      "slug": "lectures",
+      "title": "Námsefni",
+      "text": "Lærðu um JavaScript með því að fara yfir námsefnið."
+    },
+    {
+      "type": "keywords",
+      "url": "keywords.json",
+      "slug": "keywords",
+      "title": "Lykilhugtök",
+      "text": "Rifjaðu upp og lærðu lykilhugtök um JavaScript."
+    },
+    {
+      "type": "questions",
+      "url": "questions.json",
+      "slug": "questions",
+      "title": "Spurningar",
+      "text": "Æfðu þig fyrir próf með því að svara spurningum."
+    }
+  ]
+}

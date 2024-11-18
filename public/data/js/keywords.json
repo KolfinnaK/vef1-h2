@@ -1,0 +1,40 @@
+{
+  "title": "JavaScript lykilhugtök",
+  "category": "javascript",
+  "keywords": [
+    {
+      "title": "JavaScript",
+      "content": "„Forritunarmál vefsins“, staðlað hjá ECMA sem ECMAScript."
+    },
+    {
+      "title": "JavaScript týpur og aðgerðir",
+      "content": "JavaScript styður ákveðnar týpur og reikniaðgerðir."
+    },
+    {
+      "title": "string",
+      "content": "Strengi í JavaScript er hægt að skilgreina með ', \" eða `, þeir eru geymdir sem óbreytanleg röð af unicode stöfum."
+    },
+    {
+      "title": "number",
+      "content": "Allar tölur í JavaScript eru geymdar sem number, hvort þær sem eru heiltölur eða tölur með broti. Vegna þess hvernig þær eru geymdar geta þær verið ónákvæmar."
+    },
+    {
+      "title": "boolean",
+      "content": "Gildi sem er annaðhvort `true` eða `false`"
+    },
+    {
+      "title": "Veikar týpur",
+      "english": "Weak types",
+      "content": "Í JavaScript hafa breytur ekki týpur heldur hafa gildi týpur, þegar við notum gildi í óviðeigandi aðgerðir getum við fengið óvæntar niðurstöður."
+    },
+    {
+      "title": "type coercion",
+      "content": "Sjálfkrafa breyting á týpu gilda í JavaScript út frá því hvernig þau eru notuð."
+    },
+    {
+      "title": "Truthy og falsy",
+      "content": "Þegar við nýtum _type coercion_ til að fá gildi til að haga sér eins og boolean gildi, falsy gildi eru false, 0, '', null, undefined, NaN og truthy gildi eru öll önnur gildi."
+    }
+   
+  ]
+}

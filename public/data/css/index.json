@@ -1,0 +1,28 @@
+{
+  "title": "CSS",
+  "text": "CSS leyfir okkur að búa til viðmót ofan á HTML.",
+  "category": "css",
+  "content": [
+    {
+      "type": "lectures",
+      "url": "lectures.json",
+      "slug": "lectures",
+      "title": "Námsefni",
+      "text": "Lærðu um CSS með því að fara yfir námsefnið."
+    },
+    {
+      "type": "keywords",
+      "url": "keywords.json",
+      "slug": "keywords",
+      "title": "Lykilhugtök",
+      "text": "Rifjaðu upp og lærðu lykilhugtök um CSS."
+    },
+    {
+      "type": "questions",
+      "url": "questions.json",
+      "slug": "questions",
+      "title": "Spurningar",
+      "text": "Æfðu þig fyrir próf með því að svara spurningum."
+    }
+  ]
+}

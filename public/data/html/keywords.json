@@ -1,0 +1,42 @@
+{
+  "title": "HTML lykilhugtök",
+  "category": "html",
+  "keywords": [
+    {
+      "title": "HyperText",
+      "content": "Texti á stafrænu formi sem inniheldur vísanir þannig að lesandi getur strax fengið aðgang að þeim"
+    },
+    {
+      "title": "Markup mál",
+      "english": "Markup language",
+      "content": "Leið til að ljá texta aukna dýpt og skilgreina tengingar, auk lýsingar á textanum sem er setningarfræðilega aðgreind frá textanum sjálfum"
+    },
+    {
+      "title": "HTML element",
+      "content": "Einstakur hluti af vef sem getur innihaldið önnur element, texta, eða ekkert. Myndar tré."
+    },
+    {
+      "title": "HTML tag",
+      "content": "Hvert HTML element hefst á byrjunartagi og getur endað á lokatagi."
+    },
+    {
+      "title": "HTML attribute",
+      "content": "Til þess að ljá element frekari merkingu getum við bætt við nafn-gildis pari (e. name-value pair) með því að nota attribute sem eru sett á byrjunartagið."
+    },
+    {
+      "title": "Tré (gagnaskipan)",
+      "english": "Tree (data structure)",
+      "content": "Gagnaskipan sem notað er í tölvunarfræði til að tákna stigskipt (e. hierarchical) gögn með nóðum (e. node) sem eiga sér núll eða fleiri börn (e. children), og aðeins eina rótarnóðu (e. root node)."
+    },
+    {
+      "title": "Merkingarfræði",
+      "english": "Semantics",
+      "content": "Hvert HTML element býr yfir merkingu, hefur merkingarfræðilegt gildi (e. semantic value)."
+    },
+    {
+      "title": "Aðgengi",
+      "english": "Accessibility",
+      "content": "Aðgengi í samhengi við vefforritun er að gera vefi aðgengilega fyrir alla."
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "title": "HTML námsefni",
+  "category": "html",
+  "lectures": [
+    {
+      "slug": "html",
+      "title": "HTML",
+      "content": [
+        {
+          "type": "heading",
+          "data": "Texti & upplýsingar"
+        },
+        {
+          "type": "text",
+          "data": "Frá örófi alda höfum við sagt sögu, fyrst manna á milli, síðan á skinni, pappír og bókum en núna á vefnum"
+        },
+        {
+          "type": "quote",
+          "data": "The future is already here — it's just not very evenly distributed.",
+          "attribute": "William Gibson"
+        },
+        {
+          "type": "text",
+          "data": "Í kringum 1990 var Sir Tim Berners-Lee að vinna hjá CERN sem eðlisfræðingur. Hann skrifaði minnisblað um kerfi sem hann sá fyrir sér að myndi auka möguleika á samvinnu með því að deila skjölum á einfaldan hátt. Í framhaldinu skilgreindi hann HTML, t.d. í skjalinu „HTML Tags“ og skrifaði fyrsta vafrann og vefþjóninn sem túlkuðu og birtu HTML (skrifaður í Objective-C á NeXT tölvu). Fyrsta vefsíðan var síðan aðgengileg 23. ágúst 1991, og er enn aðgengileg á sömu slóð í dag."
+        },
+        {
+          "type": "image",
+          "data": "img/server.jpg",
+          "caption": "NeXT tölvan sem Tim Berners-Lee notaði til að skrifa fyrsta vefþjóninn og vafrann. Á tölvu er skrifað „This machine is a server DO NOT POWER DOWN!!“"
+        }
+      ]
+    },
+    {
+      "slug": "html-element",
+      "title": "HTML element",
+      "content": [
+        {
+          "type": "text",
+          "data": "HTML5 staðalinn skilgreinir element og skiptir þeim í hópa:"
+        },
+        {
+          "type": "list",
+          "data": [
+            "Metadata – lýsigögn",
+            "Flow – flæði",
+            "Sectioning – kaflar og svæði",
+            "Heading – fyrirsagnir",
+            "Phrasing – orðalag",
+            "Embedded – innfellt",
+            "Interactive – gagnvirkt"
+          ]
+        },
+        {
+          "type": "text",
+          "data": "Þegar við skrifum HTML eru þetta elmentin sem við skoðum m.t.t. merkingarfræði áður en við grípum eitthvað almennt. Til að aðstoða við leit er gott að nota skilgreiningar W3C, HTML5 Element Index hjá HTML5 Doctor, MDN: HTML element reference eða W3C: The Elements of HTML."
+        },
+        {
+          "type": "heading",
+          "data": "<html>"
+        },
+        {
+          "type": "list",
+          "data": [
+            "Rót HTML síðu er alltaf skilgreind með <html>",
+            "lang attribute er æskilegt þar sem það skilgreinir á hvaða máli síðan er og er notuð af t.d. lesvöfrum til að velja tungumál",
+            "Hægt er að skilgreina tungumál á öðrum texta innan síðu með lang á elementi utan um textann: <p lang=\"en\">Hello world!</p>"
+          ]
+        }
+      ]
+    }
+  ]
+}

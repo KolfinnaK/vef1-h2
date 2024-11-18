@@ -1,0 +1,92 @@
+{
+  "title": "JavaScript",
+  "category": "javascript",
+  "lectures": [
+    {
+      "slug": "js-basic",
+      "title": "Gildi, týpur og virkjar",
+      "content": [
+        {
+          "type": "quote",
+          "data": "JavaScript er túlkað skriftumál, byggt á prótótýpum með dýnamískar, veikar týpur, fyrsta flokks föll og stuðning við hlutbunda-, gildinga- og fallaforritun"
+        },
+        {
+          "type": "text",
+          "data": "Þróað af Brendon Eich hjá Netscape kringum 1995 sem Mocha og LiveScript en nefnt JavaScript að lokum. Á tíu dögum! Staðlað hjá ECMA, sem ECMAScript árið 1997. Fyrstu útgáfur ekki svo góðar og fékk á sig óorð sem scripting mál sem bara amatörar notuðu. Þroskaðist og var útfært í öllum vöfrum. Í dag „forritunarmál vefsins“. Flestar, ef ekki allar, tölvur í dag innihalda a.m.k. einn JavaScript túlk."
+        },
+        {
+          "type": "quote",
+          "data": "If you want to write imperative code that runs in a web browser, you only have one choice: JavaScript.",
+          "attribute": "Resilient Web Design, chapter 4: Languages"
+        },
+        {
+          "type": "heading",
+          "data": "ECMAScript"
+        },
+        {
+          "type": "list",
+          "data": [
+            "Fyrstu útgáfur, 1. og 2., 1997 og 1998",
+            "3. útgáfa 1999, bætti við regular expressions, betri strengjameðhöndlun, nýjum stýrisetningum o.fl.",
+            "4. útgáfa varð aldrei neitt",
+            "5. útgáfa 2009, skýrði óskýr atriði og bætti við einhverri virkni í málið",
+            "ECMAScript 6, (ECMAScript 2015) kom út í júní 2015 og innhélt marga nýja fítusa"
+          ]
+        },
+        {
+          "type": "quote",
+          "data": "JavaScript borrows most of its syntax from Java, but also inherits from Awk and Perl, with some indirect influence from Self in its object prototype system.",
+          "attribute": "JavaScript 1.1 specification"
+        },
+        {
+          "type": "text",
+          "data": "Breytur í JavaScript hafa ekki týpu, gildi hafa týpu: number, string, boolean, undefined, function eða object"
+        },
+        {
+          "type": "code",
+          "data": "let foo;\n// foo er skilgreind breyta með engu gildi — undefined\nconsole.log(typeof foo); // undefined\n\n// ef við myndum keyra línu að neðan myndum við fá SyntaxError\n// og forritið okkar myndi hætta keyrslu\n// let foo = 'bar';\n\nconst foo2 = 'bar';\n\n// breytur í JavaScript eru dýnamískar\nlet a = 'halló heimur';\n\nconsole.log(a); // \"halló heimur\"\n\na = 1;\n\nconsole.log(a); // 1\n\na = false;\n\nconsole.log(a); // false\n\na = undefined;\n\nconsole.log(a); // undefined\n\nconst FOO = 1;\n\n// ef við myndum keyra línu að neðan myndum við fá TypeError\n// og forritið okkar myndi hætta keyrslu\n// FOO = 2;\n\n// getum nefnt breytur með $, _ og íslenskum stöfum\n// en megum ekki byrja á tölustaf\n\nconst jó$$$ = '😎';\n\n// ef við myndum keyra línur að neðan myndum við fá SyntaxError\n// og forritið okkar myndi hætta keyrslu\n// let foo#% = 1;\n// let 1bar = 2;\n// let class = 'foo';\n\n// window inniheldur umhverfið í vafra en process í node.js\nconsole.log(window);\n\n// hlutir sem eru almennt aðgengilegir eru bundnir við window\nconsole.log(window.parseInt === parseInt); // true\n"
+        }
+      ]
+    },
+    {
+      "slug": "js-array",
+      "title": "Array & objects",
+      "content": [
+        {
+          "type": "heading",
+          "data": "Array"
+        },
+        {
+          "type": "list",
+          "data": [
+            "Fylki leyfa okkur að safna hlutum í raðaða lista",
+            "Búum til array með []",
+            "Nálgumst gildi innan fylkis með bracket notation",
+            "length skilar fjölda staka í fylki, frá 0 til stærsta index"
+          ]
+        },
+        {
+          "type": "code",
+          "data": "const list = [1, 2, 3];\n\nconsole.log(list.length); // 3\n\n// má þó að við höfum skilgreint sem const\nlist[100] = 1;\nconsole.log(list.length); // 101\n\n// Þar sem við skilgreinum list með const mun eftirfarandi kasta villu\n// list = ''; // TypeError\n\nconst a = 'hello world';\nconsole.log(a.length); // 11\nconsole.log(a['length']); // 11\nconsole.log(a['1%-foo']); // undefined\n\n// Óleyfilegt nafn, mun kasta villu\n// console.log(a.1%-foo); // SyntaxError\n\nconsole.log(a.toUpperCase()); // \"HELLO WORLD\"\n\nconst foo = [0, 1, 2];\nconsole.log(foo[0]); // 0\n\nconsole.log(foo.push('foo')); // 4\n\nconsole.log(foo.join(', ')); // '0, 1, 2, foo'\n\nconsole.log(foo.pop()); // 'foo'\n"
+        },
+        {
+          "type": "heading",
+          "data": "Object"
+        },
+        {
+          "type": "list",
+          "data": [
+            "Byrjum á að hugsa um object í JavaScript sem geymslu fyrir gildi þar sem gildi á sér nafn",
+            "Skilgreinum með `{}`, innan þess skilgreinum við eigindi hluts með heiti: gildi",
+            "Eigindi eru oftast skilgreind eitt per línu til að auka lesanleika",
+            "Ef við biðjum um eigindi sem ekki er skilgreint á hlut fáum við undefined"
+          ]
+        },
+        {
+          "type": "code",
+          "data": "const person = {\n  name: 'Jón Jónsson',\n\n  // óleyfilegt breytunafn án '\n  'home-address': 'Aðalgata 1',\n  age: 100,\n  registered: true,\n\n  // trailing comma\n  interests: [\n    'foo',\n    'bar',\n    'baz',\n  ],\n};\n\n\nconst a = {};\nconst key = 'bar';\n\na[key] = 'baz';\n\nconsole.log(a[key]); // baz\n\nconsole.log(a.bar); // baz\n\n\nconst obj = { foo: 1 };\nconsole.log(obj.foo); // 1\nconsole.log('foo' in obj); // true\n\nobj.bar = 'foo'; // \"foo\"\nobj['foo-bar'] = true; // true\nconsole.log(delete obj.foo); // true\n\nconsole.log('foo' in obj); // false\nconsole.log(obj); // { bar: \"foo\", foo-bar: true}\n\n\nconst foo = { x: 1, y: 2, z: 3 };\nconsole.log(Object.keys(foo)); // ['x', 'y', 'z']\nconsole.log(Object.values(foo)); // [1, 2, 3]\n\nObject.freeze(foo);\nconsole.log(delete foo.x); // false\n\n// afritum foo yfir í bar\nconst bar = Object.assign({}, foo);\n\nconst baz = { a: true, x: 9 };\n\n// afritum foo yfir í baz, yfirskrifar\nObject.assign(baz, foo);\n\nconsole.log(baz); // { a: true, x: 1, y: 2, z: 3  };\n"
+        }
+      ]
+    }
+  ]
+}

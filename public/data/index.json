@@ -1,0 +1,19 @@
+{
+  "title": "Vefforritunarvefurinn",
+  "description": "Vefur með efni um vefforritun.",
+  "navigation": [
+    {
+      "title": "HTML",
+      "slug": "html"
+    },
+    {
+      "title": "CSS",
+      "slug": "css"
+    },
+    {
+      "title": "JavaScript",
+      "slug": "javascript"
+    }
+  ],
+  "footer": "Áfram vefforritun!"
+}

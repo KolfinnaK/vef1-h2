@@ -1,0 +1,38 @@
+{
+  "title": "CSS lykilhugtök",
+  "category": "css",
+  "keywords": [
+    {
+      "title": "CSS",
+      "english": "Cascading Style Sheets",
+      "content": "Notað til að lýsa framsetningu og útliti á skjali skrifuðu í markup máli, t.d. HTML, XHTML, XML og SVG."
+    },
+    {
+      "title": "Yfirlýsingar",
+      "content": "Nafn-gildis par (e. name-value pair) þar sem nafn er eigindi (e. property) og gildi er gildið (e. value) sem við gefum því."
+    },
+    {
+      "title": "Eigindi",
+      "english": "Property",
+      "content": "Eigindi er heiti þess sem við viljum breyta eða hafa áhrif á í CSS, t.d. color eða width."
+    },
+    {
+      "title": "Gildi",
+      "english": "Value",
+      "content": "Gildi sem yfirleitt á að eiga við eigindi í CSS, t.d. #000000 eða 100px."
+    },
+    {
+      "title": "Eðlilegt flæði",
+      "english": "Normal flow",
+      "content": "Ef við höfum ekki skilgreint hvernig element á að haga sér er það í eðlilegu flæði og er sjálfgefið annað hvort block eða inline."
+    },
+    {
+      "title": "Progressive enhancement",
+      "content": "Það að einbeita okkur að upplifun sem krefst minnstu mögulegrar tækni og bæta hana í lögum"
+    },
+    {
+      "title": "Flexbox",
+      "content": "Leið til að útbúa flókin útlit á tiltölulega einfaldan hátt"
+    }
+  ]
+}

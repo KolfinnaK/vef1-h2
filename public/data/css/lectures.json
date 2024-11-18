@@ -1,0 +1,89 @@
+{
+  "title": "CSS",
+  "category": "css",
+  "lectures": [
+    {
+      "slug": "css-syntax",
+      "title": "CSS málfræði",
+      "content": [
+        {
+          "type": "text",
+          "data": "CSS stendur fyrir Cascading Style Sheets og er style sheet language sem lýsir framsetningu á skjali skrifuðu í markup máli, t.d. HTML, XHTML, XML og SVG. CSS kom fyrst fram á sjónarsviðið árið 1994 þegar Håkon Wium Lie lagði til Cascading HTML style sheets. Í tillögunni er farið yfir hvernig vafrinn stjórni að mestu allri birtingu og „the author of HTML documents has no influence over the presentation“, sem var vissulega rétt, fyrir tíma CSS var engin leið til að breyta litum á tenglum!"
+        },
+        {
+          "type": "image",
+          "data": "img/strik.jpg",
+          "caption": "strik.is hannaður með töflum maí 2000, fyrsti vefurinn til að hljóta hin íslensku vefverðlaun."
+        },
+        {
+          "type": "text",
+          "data": "Árið 1996 var CSS 1 staðlað hjá W3C en átti erfitt uppdráttar fyrstu árin eftir það. Stuðningur í vöfrum var ekki mikill og þegar virkni var útfærð var hún oftar en ekki ósamhæfð milli vafra. CSS 2 staðallinn kom út 1998 og kynnti til leiks position eigindið sem leyfði enn frekari stjórn yfir útliti. Stuðningur við CSS hélt þó áfram að vera lítill og ósamhæfður í vöfrum. Vefforritarar létu sér nægja að nota töflur og sáu sumir hverjir ekki ástæðu til að tileinka sér nýja tækni sem ekki var vel studd. Web Standards Project (WaSP) fór gagngert að þrýsta á vafraframleiðendur til að útfæra CSS rétt samkvæmt staðli og var stofnuð til þess „CSS Action Committee“ sem einnig gekk undir nafninu „The CSS Samurai“. Partur af því sem þessi hópur gerði var að útbúa viðmiðs útfærslu af CSS sem vafrar gátu hlaðið upp og borið saman við mynd. Þetta próf var kallað acid test og varð til þess að stuðningur fór hægt og rólega að aukast."
+        },
+        {
+          "type": "image",
+          "data": "img/acid.png",
+          "caption": "Upprunalega acid prófið."
+        },
+        {
+          "type": "heading",
+          "data": "Einfalt, ekki auðvelt"
+        },
+        {
+          "type": "quote",
+          "data": "You don't need to be a programmer or a CS major to understand the CSS specifications. You don't need to be over 18 or have a Bachelor's degree. You just need to be very pedantic, very persistent, and very thorough.",
+          "attribute": "Understanding the CSS Specifications"
+        },
+        {
+          "type": "text",
+          "data": "Það er líka gott að hafa í huga að þó að CSS sé einfalt er það mjög kröftugt. Flest þau útlit sem við sjáum á vefnum eru smíðuð með CSS (stundum eru myndir eða þrívíddarvirkni notuð til að smíða útlit óháð CSS). Með mikilli þolinmæði má smíða ótrúlega hluti með CSS."
+        },
+        {
+          "type": "heading",
+          "data": "Málfræði"
+        },
+        {
+          "type": "text",
+          "data": "Málfræði CSS er einföld, flest það sem við gerum byggist á því að vinna með reglusett sem samanstendur af selectors og skilgreiningum:"
+        },
+        {
+          "type": "code",
+          "data": "p {\n  color: green;\n  margin: 1em;\n}"
+        },
+        {
+          "type": "heading",
+          "data": "Selectors"
+        },
+        {
+          "type": "list",
+          "data": [
+            "Type selector, heiti á elementi, t.d. p",
+            "Universal selector, öll element, skilgreindur með *",
+            "Attribute selector, velur element eftir því hvaða attribute eru á því og hvað þau innihalda",
+            "Class selector, velur element eftir því hvað class attribute inniheldur, notar . (punkt)",
+            "ID selector, velur element eftir því hvað id attribute inniheldur",
+            "Gervi-klasar (pseudo-classes), velur hluti sem ekki er hægt að velja með hinum, einföldu selectorum, notum :. "
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "css-box-model",
+      "title": "Box model",
+      "content": [
+        {
+          "type": "text",
+          "data": "Box módelið lýsir því hvernig rétthyrnd box fyrir element eru mynduð."
+        },
+        {
+          "type": "image",
+          "data": "img/box.png",
+          "caption": "Útskýringar mynd af box modelinu."
+        },
+        {
+          "type": "text",
+          "data": "Margin er ysta lag boxsins og getum við skilgreint lengd í hverja átt með margin-top, margin-right, margin-bottom og margin-left. Lengd getur verið skilgreind sem neikvæð tala en þá er box dregið í viðkomandi átt um töluna. Litur á boxi er ekki settur á margin svæði box.\nBorder er næst ystalag boxins og teiknar jaðar utan um það. Fyrir hverja átt er hægt að skilgreina hvert gildi, t.d. border-top-width. Eða notað border shorthand sem skilgreinir allt fyrir allar hliðar eða per hlið með t.d. border-top.\npadding er næst innsta lag boxsins en það er skilgreint einsog margin en getur ekki fengið neikvætt gildi. Fær bakgrunnslit sem skilgreindur er á elementi. padding hefur eins shorthand og margin."
+        }
+      ]
+    }
+  ]
+}
