@@ -1,6 +1,11 @@
-export default {
-  root: '.',
-  server: {
-    open: true,
-  }
-};
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+  base: '/',
+  build: {
+    outDir: 'dist',
+    rollupOptions: {
+      input: './index.html',
+    },
+  },
+});

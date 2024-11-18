@@ -14,14 +14,14 @@ Efnið sem gefið er í data/html/keywords.json, data/css/keywords.json, data/js
 
 ## Að keyra verkefnið
 
-Keyra skal verkefnið með skipun í terminal:
-npm install
-npm run dev - keyrir server með vite
+Keyra skal verkefnið með skipun í terminal:  
+**npm install**  
+**npm run dev** - keyrir server með vite  
 
-Auka:
-npm run build - til að builda verkefnið
-npm run preview - hægt að previewa buildið
-npm run lint - keyrir eslint og stylelint og leitar að villum, villulaust
+Auka:  
+**npm run build** - til að builda verkefnið  
+**npm run preview** - hægt að previewa buildið  
+**npm run lint** - keyrir eslint og stylelint og leitar að villum, villulaust  
 
 ## Uppsetning
 
@@ -32,7 +32,7 @@ npm run lint - keyrir eslint og stylelint og leitar að villum, villulaust
 
 
 ## Útfærsla
-**Birting á námsefni, gildir sem tvö auka verkefni**
+**Birting á námsefni, gildir sem tvö auka verkefni**  
 Útfærðum þetta þannig að þegar ýtt er á námsefni takkann færðu val á fyrirlestrum (lista af heiti þeirra) og þegar þú velur ákveðinn fyrirlestur færðu nánari námsefni fyrir hann. 
 
 * Ný skrá: show-lectures.js var búin til til að útfæra birtingu á námsefni.
@@ -48,7 +48,7 @@ npm run lint - keyrir eslint og stylelint og leitar að villum, villulaust
 * Dýnamísk birting á gögnum: Með showLecturesList og showLectureDetail er DOM uppfært með lista yfir fyrirlestra eða smáatriðum fyrir valinn fyrirlestur.
 * Hnappar í renderSubpage (t.d. „Námsefni“) vísa á námsefnissíður með breytingu á URL og kalla á render til að birta viðeigandi efni.
 
-* **Birting á lykilhugtökum**
+**Birting á lykilhugtökum**
 * Lykilhugtökin voru birt á svipaðan hátt og námsefnið. 
 * Ný skrá var búin til: show-keywords.js
 * Í henni er showKeywordsList sem birtir lista af öllum lykilhugtökum fyrir valið efni.
