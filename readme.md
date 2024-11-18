@@ -16,7 +16,7 @@ Efnið sem gefið er í data/html/keywords.json, data/css/keywords.json, data/js
 
 Keyra skal verkefnið með skipun í terminal:  
 **npm install**  
-**n**pm run dev** - keyrir server með vite  
+**npm run dev** - keyrir server með vite  
 
 Auka:  
 **npm run build** - til að builda verkefnið  
