@@ -32,7 +32,7 @@ Auka:
 
 
 ## Útfærsla
-**Birting á námsefni, gildir sem tvö auka verkefni**
+**Birting á námsefni, gildir sem tvö auka verkefni**  
 Útfærðum þetta þannig að þegar ýtt er á námsefni takkann færðu val á fyrirlestrum (lista af heiti þeirra) og þegar þú velur ákveðinn fyrirlestur færðu nánari námsefni fyrir hann. 
 
 * Ný skrá: show-lectures.js var búin til til að útfæra birtingu á námsefni.
