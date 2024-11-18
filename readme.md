@@ -48,7 +48,7 @@ npm run lint - keyrir eslint og stylelint og leitar að villum, villulaust
 * Dýnamísk birting á gögnum: Með showLecturesList og showLectureDetail er DOM uppfært með lista yfir fyrirlestra eða smáatriðum fyrir valinn fyrirlestur.
 * Hnappar í renderSubpage (t.d. „Námsefni“) vísa á námsefnissíður með breytingu á URL og kalla á render til að birta viðeigandi efni.
 
-* **Birting á lykilhugtökum**
+**Birting á lykilhugtökum**
 * Lykilhugtökin voru birt á svipaðan hátt og námsefnið. 
 * Ný skrá var búin til: show-keywords.js
 * Í henni er showKeywordsList sem birtir lista af öllum lykilhugtökum fyrir valið efni.
